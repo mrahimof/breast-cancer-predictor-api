@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: breast-cancer-predictor-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
